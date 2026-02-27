@@ -24,7 +24,6 @@ This project was developed as part of my learning journey as a third-year B.Tech
 - **Python 3.9+**
 - **scikit-learn** (machine learning)
 - **Streamlit** (web interface)
-- **Tkinter** (desktop GUI)
 - **Pickle** (model serialization)
 - **pandas, numpy** (data handling)
 
