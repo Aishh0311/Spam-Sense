@@ -1,125 +1,104 @@
-﻿---
+﻿# Spam Mail Detection - Spam Sense
 
-# Email Spam Detection
-
-![Project Logo](https://img.shields.io/badge/Streamlit-Deployed-green)
-**Deployed Application:** [Visit the App](https://sruthi-email-spam-detect.streamlit.app/)
-
-This repository hosts the **Email Spam Detection** project, an interactive web app built using Python and Streamlit. It uses a trained **Machine Learning** model to classify emails as spam or legitimate (ham).
+A minimal, easy-to-use email spam classifier built using Python and machine learning. This project leverages a trained model to help users instantly detect whether an email message is spam or legitimate.
 
 ---
 
-## ✨ Features
+## 📝 About
 
-- **Simple & Sleek UI** — Straightforward for anyone to use.
-- **Instant Predictions** — Classify email content in real-time.
-- **Machine Learning Powered** — Uses a trained Logistic Regression model.
-- **Pretrained Integration** — Includes vectorizer and model loading via `pickle`.
+This project was developed as part of my learning journey as a third-year B.Tech student interested in practical applications of machine learning. The app uses a Multinomial Naive Bayes classifier, and provides both a Streamlit web interface and a basic Tkinter GUI.
 
 ---
 
-## 📋 Table of Contents
+## 🚀 Features
 
-1. [Overview](#-overview)
-2. [Technologies Used](#-technologies-used)
-3. [Setup and Installation](#-setup-and-installation)
-4. [Project Workflow](#-project-workflow)
-5. [Screenshots](#-screenshots)
-6. [Future Enhancements](#-future-enhancements)
-7. [Contributors](#-contributors)
+- **Instant Spam Detection**: Paste any email text and get an immediate prediction.
+- **User-Friendly Interface**: Modern web UI with Streamlit and a simple Tkinter desktop app.
+- **Machine Learning Powered**: Trained on a labeled dataset of real-world emails.
+- **Custom Security Tips**: Offers actionable advice to improve your email safety awareness.
 
 ---
 
-## 🌟 Overview
+## 🧰 Tech Stack
 
-The **Email Spam Detection** app provides a real-world example of how Machine Learning can help prevent email spam. Simply paste any email content, and the model instantly predicts whether it's spam or not.
-
-This project was built to combine **ML accuracy** with **real-world usability**, helping users make better decisions on suspicious emails.
-
----
-
-## 🚀 Technologies Used
-
-- **Python** — Backend and ML logic
-- **Streamlit** — Frontend web interface
-- **Pickle** — Model/vectorizer serialization
-- **Logistic Regression** — For spam/ham classification
+- **Python 3.9+**
+- **scikit-learn** (machine learning)
+- **Streamlit** (web interface)
+- **Tkinter** (desktop GUI)
+- **Pickle** (model serialization)
+- **pandas, numpy** (data handling)
 
 ---
 
-## 🛠️ Setup and Installation
+## 📦 Installation & Usage
 
-### Prerequisites:
+1. **Clone this repository:**
+   ```bash
+   git clone https://github.com/JanakiVeluri006/spam-mail-detection.git
+   cd spam-mail-detection
+   ```
 
-- Python 3.9+ must be installed
+2. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-```bash
-git clone https://github.com/sruthisoppa/Email-Spam-Detection.git
-cd Email-Spam-Detection
-```
+3. **Run the Streamlit web app:**
+   ```bash
+   streamlit run app.py
+   ```
+   - Open the provided local URL in your browser.
 
-### Install Dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-### Launch the App:
-
-```bash
-streamlit run app.py
-```
-
----
-
-## 📈 Project Workflow
-
-1. **User Input** — Paste email content in the app.
-2. **Vectorization** — Text is converted to numerical data using `TfidfVectorizer`.
-3. **Prediction** — Logistic Regression model predicts the outcome.
-4. **Output** — Displays whether the email is SPAM or NOT SPAM.
+4. **(Optional) Run the notebook for training or exploration:**
+   - Open `Spam Detector.ipynb` in Jupyter Notebook or VS Code.
 
 ---
 
-## 🖼️ Screenshots
+## 📂 Project Structure
 
-### 🏠 Home Page
-
-![home.png](https://ik.imagekit.io/jxtjn4hpqj/Screenshot%202025-05-24%20095612.png?updatedAt=1748060803517)
-
-### 🧠 Prediction Output
-
-![output.png](https://ik.imagekit.io/jxtjn4hpqj/image.png?updatedAt=1748062855916)
+- `app.py` — Streamlit web application for interactive spam detection
+- `Spam Detector.ipynb` — Data analysis, model training, and evaluation notebook
+- `spam.pkl` — Trained spam classification model (generated after running the notebook)
+- `vectorizer.pkl` — Text vectorizer (generated after running the notebook)
+- `requirements.txt` — Python dependencies
 
 ---
 
-## 🔮 Future Enhancements
+## 🖥️ How it Works
 
-- Add **Dark Mode**
-- Enable testing with real-time email feeds
-- Create a **REST API** version
-- Upgrade to ensemble models (Random Forest / SVM)
-
----
-
-## 👩‍💻 Contributors
-
-| Name         | Role                   | GitHub Profile                        |
-| ------------ | ---------------------- | ------------------------------------- |
-| Soppa Sruthi | Developer & Maintainer | _Add GitHub profile here if you like_ |
+1. User enters/pastes email content.
+2. The text is vectorized using a trained `CountVectorizer`.
+3. The model predicts whether the input is spam or ham (not spam).
+4. The app displays the result along with security tips.
 
 ---
 
-## 🌐 Connect with Me
+## 💡 Sample Usage
 
-- **Email**: [sruthisoppa@gmail.com](mailto:sruthisoppa@gmail.com)
+Paste a suspicious message in the app, click **Analyze**, and see if it’s safe or spam!
 
 ---
 
-Let me know if you'd like me to:
+## 🔒 Email Safety Tips
 
-- Add **LinkedIn or GitHub profile links**
-- Generate a **custom project badge**
-- Include **screenshot placeholders** or visuals
+- Never click on suspicious links or attachments.
+- Always verify the sender’s identity.
+- Keep your antivirus and spam filters updated.
 
-Ready to drop this into your repo as `README.md`!
+---
+
+## 👤 Author
+
+**Janaki Veluri**  
+Third-year B.Tech student | Python/C/Java enthusiast  
+<!-- Add social or contact links if desired -->
+
+---
+
+## 📜 License
+
+This project is for educational purposes.
+
+---
+
+Feel free to fork, contribute, or suggest improvements!
